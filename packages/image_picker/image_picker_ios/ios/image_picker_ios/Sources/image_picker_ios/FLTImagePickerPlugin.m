@@ -106,6 +106,8 @@ typedef NS_ENUM(NSInteger, ImagePickerClassType) { UIImagePickerClassType, PHPic
   } else {
     config.filter = [PHPickerFilter imagesFilter];
   }
+    
+    config.preferredAssetRepresentationMode = PHPickerConfigurationAssetRepresentationModeCurrent;
 
   PHPickerViewController *pickerViewController =
       [[PHPickerViewController alloc] initWithConfiguration:config];
